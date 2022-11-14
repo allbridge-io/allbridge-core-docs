@@ -1,0 +1,22 @@
+flowchart TB
+    user_a(User)
+    user_b(User)
+    subgraph chain_a[Ethereum]
+        bridge_a[Bridge]
+        messenger_a[Messenger]
+        pool_a[USDT Pool]
+        bridge_a --> |4. $ value| messenger_a
+        bridge_a -->|2. USDT| pool_a
+        pool_a -->|3. $ value| bridge_a
+    end
+    subgraph chain_b[BNB Chain]
+        messenger_b[Messenger]
+        bridge_b[Bridge]
+        pool_b[BUSD Pool]
+        messenger_b -->|6. $ value| bridge_b
+        bridge_b -->|7. $ value| pool_b
+        pool_b -->|8. BUSD| bridge_b
+    end
+    user_a -->|1. USDT| bridge_a
+    bridge_b -->|9. BUSD| user_b
+    messenger_a --> |5. $ value| messenger_b

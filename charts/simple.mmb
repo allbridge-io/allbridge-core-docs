@@ -1,0 +1,2 @@
+flowchart LR
+    user_a(User) --> |Token| chain_a(Chain A) --> |Value| messaging(Messaging) --> |Value| chain_b(Chain B) --> |Token| user_b(User)
