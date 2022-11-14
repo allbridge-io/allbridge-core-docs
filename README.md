@@ -61,7 +61,9 @@ When transferring tokens between blockchains the amount need to be converted int
 For the sending side (converting tokens into their value):
 
 $$x = x_{orig} + x_{tokens}$$
+
 $$y = \frac{\sqrt{4ad^3x + (4adx - 4ax^2 - dx)^2} + 4adx - 4ax^2 - dx}{8ax}$$
+
 $$y_{value} = y_{orig} - y$$
 
 Where:
@@ -76,7 +78,9 @@ Where:
 For the receiving side (converting value into tokens the formula is very similar, but reversed):
 
 $$y = y_{orig} + y_{value}$$
+
 $$x = \frac{\sqrt{4ad^3y + (4ady - 4ay^2 - dy)^2} + 4ady - 4ay^2 - dy}{8ay}$$
+
 $$x_{tokens} = x_{orig} - x$$
 
 The meaning of the variables is the same as before, but for the token pool on the receiving side.
