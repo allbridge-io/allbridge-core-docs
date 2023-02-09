@@ -48,11 +48,11 @@ To pay for the receiving transactions on the destination chain, the user pays a 
 These adjustments affect the final amount received by the user. They include:
 
 - Dollar value of the sending token, if more than `1` the amount will increase
-- Source chain liquidity provider fee, always `0.05%` of the transfer amount
+- Source chain liquidity provider fee, always `0.15%` of the transfer amount
 - Dollar value of the receiving token, if more than `1` the amount will decrease
-- Destination chain liquidity provider fee, always `0.05%` of the transfer amount
+- Destination chain liquidity provider fee, always `0.15%` of the transfer amount
 
-To summarize, the user always pays `0.1%` to the liquidity providers, the rest is the token value fluctuations explained below.
+To summarize, the user always pays `0.3%` to the liquidity providers, the rest is the token value fluctuations explained below.
 
 ## Token value
 
